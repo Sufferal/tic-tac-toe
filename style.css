@@ -1,0 +1,67 @@
+/* Variables */
+:root {
+  --font-color: #fff;
+  --font-size: 10px;
+  
+  --grid-gap: 18px;
+
+  --primary-color: #FFCB3C;
+  --secondary-color: #5E7EFA;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background styles */
+body, html {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+svg {
+	width: 100%;
+	height: 100vh;
+}
+
+button {
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.btn {
+  color: var(--font-color);
+  background-color: var(--secondary-color);
+}
+
+#game {
+  position: absolute;
+  z-index: 999;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: calc(var(--grid-gap) / 4);
+
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container .btn {
+  padding: 3.5rem;
+  font-size: calc(var(--font-size) * 6);
+}
