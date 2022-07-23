@@ -3,10 +3,14 @@
   --font-color: #fff;
   --font-size: 10px;
   
+  --btn-size: 150px;
   --grid-gap: 18px;
 
   --primary-color: #FFCB3C;
+  /* --primary-color: #000; */
   --secondary-color: #5E7EFA;
+
+  --disabled-color: #FF8201;
 }
 
 *, *::before, *::after {
@@ -39,6 +43,10 @@ button {
   background-color: var(--secondary-color);
 }
 
+.btn.disabled {
+  background-color: var(--disabled-color);
+}
+
 #game {
   position: absolute;
   z-index: 999;
@@ -47,6 +55,7 @@ button {
   height: 100vh;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -54,7 +63,7 @@ button {
 .container {
   background-color: var(--primary-color);
   border-radius: 5px;
-  padding: calc(var(--grid-gap) / 4);
+  /* padding: calc(var(--grid-gap) / 4); */
 
   display: grid;
   gap: var(--grid-gap);
@@ -62,6 +71,24 @@ button {
 }
 
 .container .btn {
-  padding: 3.5rem;
+  /* padding: 2.5rem; */
+
+  width: var(--btn-size);
+  height: var(--btn-size);
+
   font-size: calc(var(--font-size) * 6);
+}
+
+.standings {
+  width: 100%;
+
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.standings .btn {
+  padding: 1rem;
+  border-radius: 5px;
 }
